@@ -1,0 +1,791 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --maincolor: #bb9351;
+    --headercolor: #ffffff;
+    --backgroundcolor: #bba251;
+    --fontcolor: #000;
+    --bordershadow: #bb925193;
+} 
+html, body {
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+/* HEADER */
+.logo {
+    padding: 0;
+}
+
+.site-header {
+    background-color: var(--headercolor);
+    width: 100%;  
+    position: fixed;
+    z-index: 1;
+    top:0;
+    border-bottom: solid var(--maincolor); 
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.site-header .flex-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav li, .header-icons li, .footer-nav li{
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--fontcolor);
+}
+
+.main-nav a, .header-icons a, .mini-header a, .footer-nav a, .tel-email a, .social-media-icons a{
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+    color:var(--fontcolor);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.main-nav a {
+    text-transform: uppercase;
+}
+
+.mobile-nav {
+    display: none;  
+}
+
+.header-icons a {
+    font-size: 1.2rem;
+}
+.main-nav a:hover, .main-nav a.active, .instagram-feed .section-heading p a:hover {
+    color: var(--maincolor);
+}
+
+a:visited {
+    color: var(--fontcolor);
+}
+
+/* dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--headercolor);
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 5px 5px 0px var(--bordershadow);
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    font-size: 0.9rem;
+    padding: 7px
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* dropdown menu. pabaiga */
+/* HEADER pabaiga */
+
+
+
+
+/* HERO */
+section.hero-image {
+    margin-top: 106px;
+}
+.hero-image, .ind-uzsakymai{
+    background-image: url("../images/baneris81.jpg");
+    background-color: var(--headercolor);
+    height: 900px;
+    max-width: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.hero-text, .ind-uzsakymai-text {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.40);
+    border-radius: 10px;
+    padding: 40px 80px;
+    white-space: nowrap;
+}
+
+.hero-text h1, .ind-uzsakymai-text h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    line-height: 1.4em;
+    margin-top: 20px;
+}
+
+.hero-text p, .ind-uzsakymai-text p {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+/* mygtukas */
+.hero-button {
+    background-color: #bba251e1;
+    border: 2px solid #bba251e1;
+    width: 300px;
+    height: 40px;
+    margin: 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;  
+}
+
+.ind-uzsakymai .hero-button {
+    height: 55px;
+    width: 330px;
+}
+
+.hero-button:hover {
+    background-color: rgba(255, 255, 255, 0.753);
+    border: 2px solid #bba251e1;
+}
+
+.hero-button:active {
+    transform: translateY(3px);
+}
+/* mygtukas. pabaiga */
+/* HERO pabaiga */
+
+
+
+
+/* POPULIARIAUSI */
+h2 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+.populiariausi {
+    margin: 180px auto;
+}
+.populiariausi > .flex-container {
+    flex-direction:column;
+}
+
+.populiariausi .section-heading {
+    text-align: center;
+}
+
+.populiariausi .section-heading p {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.populiariausi .section-heading h2, .atsiliepimai .section-heading h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* brūkšnys po pavadinimo */
+.populiariausi .section-heading h2:after, .atsiliepimai .section-heading h2:after {
+    content: "";
+    display: block;
+    width: 160px;
+    border-top: 4px solid var(--backgroundcolor);
+    margin: 30px auto;
+}
+
+.populiariausi .section-heading p {
+    line-height: 1.5em;
+}
+
+.preke p {
+    text-align: center;
+}
+
+.preke p:first-of-type {
+    padding: 20px 0;
+}
+
+.preke p:last-of-type {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.trys-prekes.flex-container {
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.preke {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+    margin: 5px;
+    padding: 7px;
+    border: 1px double var(--backgroundcolor);
+}
+
+/* nuotraukos zoom */
+.zoom-hover {
+    overflow: hidden;
+}
+
+.preke img {
+    transition: transform 2.5s;
+}
+
+.preke img:hover {
+    transform: scale(1.15);
+}
+/* nuotraukos zoom. pabaiga */
+/* POPULIARIAUSI pabaiga */
+
+
+
+
+/* INDIVIDUALŪS UŽSAKYMAI */
+.ind-uzsakymai {
+    background-image: url("../images/baneris6.jpg");
+}
+/* INDIVIDUALŪS UŽSAKYMAI pabaiga. Ši dalis beveik tokia pati, kaip hero.*/
+
+
+
+
+/* ATSILIEPIMAI */
+.atsiliepimas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bba2513f;
+    border-radius: 30px;
+    min-height: 280px;
+}
+
+.nuotrauka img {
+    border-radius: 50%;
+    margin: 30px;
+}
+
+.stars {
+    color: var(--backgroundcolor);
+    padding: 20px 50px 10px 50px;
+}
+
+.tekstas {
+    line-height: 2em;
+    padding: 20px 50px;
+}
+
+.vardas {
+    padding: 10px 50px 20px 50px;
+}
+/* ATSILIEPIMAI pabaiga*/
+
+
+
+
+/* INSTAGRAM FEED */
+.instagram-feed {
+    margin: 180px auto;
+}
+
+.instagram-feed .section-heading h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.instagram-feed .section-heading p {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.instagram-feed h2:after {
+    content: "";
+    display: block;
+    width: 160px;
+    border-top: 4px solid var(--backgroundcolor);
+    margin: 30px auto;
+}
+
+.snapwidget {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.instagram-feed .flex-container, .naujienlaiskis .flex-container {
+    flex-direction: column;
+}
+/* INSTAGRAM FEED.pabaiga */
+
+
+
+
+/* NAUJIENLAISKIS */
+.naujienlaiskis {
+    background-image: url("../images/baneris2.jpg");
+    width: 100%;
+}
+
+.naujienlaiskis .container {
+    width: 67%;
+    padding: 50px 0;
+}
+
+.naujienlaiskis h3 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 50px 0;
+}
+
+.naujienlaiskis p {
+    margin: 0 auto;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+form {
+    margin: 50px 0;
+    align-items: center;
+}
+
+.naujienlaiskis input {
+    height: 50px;
+    width: 67%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.naujienlaiskis button {
+    margin-top: 10px;
+    height: 50px;
+    width: 67%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #bba251da;
+}
+/* NAUJIENLAISKIS.pabaiga */
+
+
+
+
+/* FOOTER */
+.site-footer {
+    background-color: var(--maincolor);
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 20px;
+}
+
+.site-footer > .flex-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-footer a {
+    padding: 5px;
+}
+
+.footer-nav a:hover, .footer-contact a:hover{
+    opacity: 50%;
+}
+
+.footer-nav .flex-container, .tel-email , .footer-contact .flex-container {
+    flex-direction: column;
+}
+
+.footer-contact .flex-container {
+    align-items: center;
+}
+
+.tel-email i, .social-media-icons {
+    padding: 5px 0;
+}
+
+.social-media-icons {
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.footer-logo img {
+    border-radius: 50%;
+    max-height: 120px;
+    outline: none;
+}
+
+.copyrigth {
+    margin-top: 30px;
+    font-size: 0.8rem;
+}
+/* FOOTER pabaiga*/
+
+
+
+
+/* KONTAKTAI */
+section.contact {
+    margin-top: 106px;
+    background-image: url("../images/geliukabykle.jpg");
+    max-width: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact .flex-container {
+    flex-direction: column;
+}
+
+.contact .section-heading h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contact .section-heading p {
+    text-align: center;
+    line-height: 1.5em;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.contact .section-heading h2:after {
+    content: "";
+    display: block;
+    width: 160px;
+    border-top: 4px solid var(--backgroundcolor);
+    margin: 30px auto;
+}
+
+.contact .section-content {
+    width: 67%;
+    margin: 50px auto;
+}
+
+.contact-form .input-row input{
+    outline: none;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 10px 15px;
+    width: calc(50% - 10px);
+}
+
+.contact-form .input-row {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contact-form .input-row input:first-of-type {
+    margin-right: 10px;
+}
+
+.contact-form .input-row input:last-of-type {
+    margin-left: 10px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    outline: none;
+    border: none;
+}
+
+.contact-form > input {
+    width: 350px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #bba251da;
+}
+
+/* .contact .section-content .contact-form .empty-input {
+    border: 1px solid;
+    border-color: red;
+} */
+/* KONTAKTAI pabaiga */
+
+
+
+@media all and (max-width: 1000px) {
+
+    /* sumažinti navigaciją */
+    .main-nav a {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    .logo img {
+        height: 70px;
+    }   
+    /* sumažinti navigaciją. pabaiga */
+
+    section.hero-image, section.contact {
+        margin-top: 76px;
+    }
+
+    /* atsiliepimuose neberodyti nuotraukos */
+    .nuotrauka {
+        display: none;
+    }
+
+
+}
+
+@media all and (max-width: 800px) {
+
+    /* siauresniame ekrane headeris neišlieka prikabintas */
+    .site-header {
+        position: unset;
+    }
+    
+    section.hero-image, section.contact {
+        margin-top: 0;
+    }
+
+    /* nuimamas nuotraukos scrolinimas */
+    .hero-image, .ind-uzsakymai{
+        background-attachment: unset;
+        height: 500px;
+    }
+  
+    .hero-text, .ind-uzsakymai-text {
+        top: 50%;
+    }
+    /* nuimamas nuotraukos scrolinimas.pabaiga */
+
+    /* atsiranda burgeris */
+    .main-nav {
+        display: none;
+    }
+    .mobile-nav {
+        position: relative;
+        width: 100%;
+        display: block;
+        z-index: 1;
+    }
+    .mobile-nav li {
+        list-style: none;
+    }
+    .mobile-nav ul {
+        flex-direction: column;
+        display: none;
+        position: fixed;
+        top: 65px;
+        right: 0;
+        padding: 25px;
+        background-color: var(--backgroundcolor);
+        border-radius: 10px;
+    }
+
+    /* krepšelis navigacijoje */
+    .mobile-nav ul li:last-of-type {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid black;
+    }
+
+    .mobile-nav a {
+        color: var(--fontcolor);
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: 0 5px;
+        padding: 10px 17px;
+        display: block;
+    }
+
+    .mobile-nav a:active {
+        color: var(--maincolor);
+    }
+
+    .mobile-nav a.icon {
+        display: block;
+        position: fixed;
+        z-index: 1;
+        top: 15px;
+        right: 10px;
+        color: var(--maincolor);
+        font-size: 1.3rem;
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid var(--maincolor);
+    }
+    /* burgerio pabaiga */
+
+    .footer-logo {
+        display: none;
+    }
+
+    .naujienlaiskis input, .naujienlaiskis button {
+        width: 100%;
+    }
+
+    /* kad trys prekių nuotraukos tilptų į ekraną */
+    .trys-prekes.flex-container {
+        flex-wrap: wrap;
+    }
+
+    /* kontaktinė forma. siaurame ekrane platesnė. suvienodinti paddingus, pakeisti tarpus tarp eilučių*/
+    .contact-form .input-row {
+        flex-direction: column;
+    }
+
+    .contact-form .input-row input:first-of-type {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    
+    .contact-form .input-row input:last-of-type {
+        margin-left: 0;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .contact .section-content {
+        width: 75%;
+    }
+
+    .contact-form > input {
+        width: 100%;
+    }
+
+    .contact-form .input-row input {
+        width: calc(100% - 0px);
+    }
+
+    .contact-form textarea {
+        padding: 10px 15px;
+    }
+    /* kontaktinė forma. pabaiga*/
+
+}
+
+@media all and (max-width: 630px) {
+
+    /* atsiliepimuose mažesni paddingai */
+    .stars, .tekstas, .vardas {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .tekstas {
+        line-height: 2em;
+    }
+}
+
+@media all and (max-width: 590px) {
+
+    .hero-text h1, .ind-uzsakymai-text h1 {
+        font-size: 2.2rem;
+        letter-spacing: 5px;
+    }
+
+    .hero-text p, .ind-uzsakymai-text p {
+        font-size: 0.9rem;
+    }
+
+    .hero-button {
+        font-size: 0.9rem;
+        width: 250px;
+        height: 35px;
+    }
+ 
+ 
+    /* sumažinti h2 dydžiai */
+    .populiariausi .section-heading h2, .atsiliepimai .section-heading h2, .instagram-feed .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .instagram-feed .snapwidget{
+        width: 90%;
+    }
+    
+    .instagram-feed .section-heading p {
+        margin-bottom: 40px;
+    }
+
+    .instagram-feed {
+        margin-bottom: 90px;
+    }
+
+    .naujienlaiskis h3 {
+        font-size: 1.5rem;
+    }
+
+    .naujienlaiskis input, .naujienlaiskis button {
+        width: 100%;
+    }
+
+    .site-footer .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav, .footer-contact {
+        padding: 20px 0;
+    }
+
+    .copyrigth {
+        text-align: center;
+    }
+
+    /* vėl rodyti logo footeryje. buvo nerodomas planšetėje */
+    .footer-logo {
+        display: unset;
+    }
+
+
+}
+
